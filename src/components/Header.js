@@ -15,12 +15,12 @@ const Header = () => {
               <div className="searchIconContainer">
                   <img src={searchIcon} alt="searchIcon" />
               </div>
-              <input className="searchInput" placeholder="Cari koleksi atau user ..." />
+              <input className="searchInput" placeholder="Coba cari sekarang koleksi, jenis atau nama pengguna ..." />
           </div>
 
           <div className="headerItems">
-              <p>Drops</p>
-              <p>Marketplaces</p>
+              <p>Giveaway</p>
+              <p>Explore</p>
               <p>Buat</p>
           </div>
 
