@@ -39,16 +39,26 @@ const Main = ({ selectedNFT, nftListData}) => {
                         <div className="ownerDetails">
                             <div className="ownerNameAndHandle">
                                 <div>{activeNFT.owner.address}</div>
-                                <div className="ownerHandle">@farridkun</div>
+                                <div className="ownerHandle">
+                                    <a href="https://www.github.com/farridkun/">
+                                        @farridkun
+                                    </a>
+                                </div>
                             </div>
                             <div className="ownerLink">
-                                <img src={instagramLogo} alt="@Farrid_jr" />
+                                <a href="https://www.instagram.com/farrid_jr/">
+                                    <img src={instagramLogo} alt="@Farrid_jr" />
+                                </a>
                             </div>
                             <div className="ownerLink">
-                                <img src={twitterLogo} alt="@kuntoro_farrid" />
+                                <a href="https://www.twitter.com/@kuntoro_farrid/">
+                                    <img src={twitterLogo} alt="@kuntoro_farrid" />
+                                </a>
                             </div>
                             <div className="ownerLink">
-                                <img src={moreIcon} alt="@FarridKun" />
+                                <a href="https://www.linkedin.com/in/farridkun/">
+                                    <img src={moreIcon} alt="@FarridKun" />
+                                </a>
                             </div>
                         </div>
                     </div>

@@ -81,8 +81,9 @@
     color: #fff;
 }
 
-.ownerHandle {
+.ownerHandle > a {
     color: #00ebfe;
+    text-decoration: none;
 }
 
 .ownerLink {
@@ -94,7 +95,7 @@
     margin: 0 0 0 10px;
 }
 
-.ownerLink > img {
+.ownerLink > a > img {
     height: 100%;
     width: 100%;
 }
