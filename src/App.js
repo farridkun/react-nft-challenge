@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 import './App.css';
+import CollectionCard from './components/CollectionCard';
+import Header from './components/Header';
+import CardList from './components/CardList';
 
 function App() {
+  const [nftData, setNFTData] = useState([]);
+
+  useEffect(() => {
+    const getMyNFTs = async () => {
+      const openseaData = await axios.get('https://testnets-api.opensea.io/api/v1/assets?asset_contract_addresses=0x514854d720d37288BdfD26ab01Fb38612F69f707&order_direction=asc');
+
+      console.log('test data nft', openseaData.data.assets);
+      setNFTData(openseaData.data.assets);
+    }
+
+    return getMyNFTs();
+  }, [])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Header />
+      <CardList cardListData={nftData} />
     </div>
-  );
+  )
 }
 
 export default App;
